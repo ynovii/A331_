@@ -1,0 +1,200 @@
+.story-hero-tag--icon {
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
+}
+
+.story-hero-tag--icon img {
+    height: 24px;
+}
+
+.route-days {
+    --rail: 26px;
+    --dot: 28px;
+    position: relative;
+    margin: 100px 80px 0;
+    padding: 0 0 calc(var(--dot) + 20px) 110px;
+}
+
+.route-days::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    bottom: calc(var(--dot) / 2);
+    left: calc(var(--rail) + var(--dot) / 2 - 2px);
+    width: 4px;
+    background: var(--text);
+}
+
+.route-days::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: var(--rail);
+    width: var(--dot);
+    height: var(--dot);
+    border-radius: 50%;
+    background: var(--text);
+}
+
+.route-day + .route-day {
+    margin-top: 60px;
+}
+
+.route-day {
+    scroll-margin-top: 40px;
+}
+
+.route-day-title {
+    position: relative;
+    font-family: var(--font-heading);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.15;
+    max-width: 1000px;
+    margin-bottom: 36px;
+}
+
+.route-day-title::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: calc(var(--rail) - 110px);
+    width: var(--dot);
+    height: var(--dot);
+    border-radius: 50%;
+    background: var(--text);
+}
+
+.route-day-way {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.route-day-subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.route-sights,
+.route-stays {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.route-sights {
+    gap: 20px;
+    max-width: 1000px;
+}
+
+.route-stays {
+    gap: 14px;
+}
+
+.route-sights li,
+.route-stays li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    padding-left: 36px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.route-sights li::before,
+.route-stays li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 22px;
+    height: 30px;
+    transform: translateY(-50%);
+    background: #4A5A12;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 30'%3E%3Cpath fill-rule='evenodd' d='M11 30S0 17.6 0 11a11 11 0 0 1 22 0c0 6.6-11 19-11 19zm0-15.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'/%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 30'%3E%3Cpath fill-rule='evenodd' d='M11 30S0 17.6 0 11a11 11 0 0 1 22 0c0 6.6-11 19-11 19zm0-15.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.route-stays li::before {
+    background: #4A4A4A;
+}
+
+.route-day-tip {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 1060px;
+    margin-bottom: 40px;
+}
+
+.route-photo {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.route-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1538 / 500;
+    object-fit: cover;
+}
+
+.route-photo-place {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.route-photo-coords {
+    text-shadow: none;
+}
+
+.route-photo-coords {
+    padding: 8px 20px;
+    border-radius: 8px;
+    background: rgba(30, 28, 24, 0.9);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .route-days { --rail: 0px; margin: 80px 40px 0; padding-left: 70px; }
+    .route-day-title { font-size: 32px; }
+    .route-day-title::before { left: calc(var(--rail) - 70px); }
+}
+
+@media (max-width: 768px) {
+    .route-days { --dot: 18px; margin: 60px 20px 0; padding-left: 34px; }
+    .route-days::before { top: 8px; width: 2px; left: calc(var(--dot) / 2 - 1px); }
+    .route-day-title { font-size: 24px; margin-bottom: 20px; }
+    .route-day-title::before { top: 4px; left: -34px; }
+    .route-day + .route-day { margin-top: 40px; }
+    .route-day-way,
+    .route-day-tip,
+    .route-sights li,
+    .route-stays li { font-size: 16px; }
+    .route-day-way { margin-bottom: 24px; }
+    .route-day-subtitle { font-size: 19px; margin-bottom: 14px; }
+    .route-sights,
+    .route-stays,
+    .route-day-tip { margin-bottom: 28px; }
+    .route-sights li,
+    .route-stays li { padding-left: 30px; }
+    .route-sights li::before,
+    .route-stays li::before { width: 18px; height: 24px; }
+    .route-photo { border-radius: 16px; }
+    .route-photo img { aspect-ratio: 4 / 3; }
+    .route-photo-place { top: 12px; right: 12px; gap: 6px; font-size: 12px; }
+    .route-photo-coords { padding: 6px 12px; font-size: 11px; }
+}

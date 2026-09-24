@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('../fonts/pt-root-ui_bold.woff'),
+    url('../fonts/pt-root-ui_bold.woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('../fonts/pt-root-ui_medium.woff'),
+    url('../fonts/pt-root-ui_medium.woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('../fonts/pt-root-ui_regular.woff'),
+    url('../fonts/pt-root-ui_regular.woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('../fonts/pt-root-ui_light.woff'),
+    url('../fonts/pt-root-ui_light.woff2');
+  font-weight: 300;
+}
+@font-face {
+    font-family: 'TT Fellows Trial';
+    src: url('../fonts/TTFellowsTrial-Bd.eot');
+    src: url('../fonts/TTFellowsTrial-Bd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTFellowsTrial-Bd.woff2') format('woff2'),
+        url('../fonts/TTFellowsTrial-Bd.woff') format('woff'),
+        url('../fonts/TTFellowsTrial-Bd.ttf') format('truetype'),
+        url('../fonts/TTFellowsTrial-Bd.svg#TTFellowsTrial-Bd') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fors Trial';
+    src: url('../fonts/TTForsTrial-Regular.eot');
+    src: url('../fonts/TTForsTrial-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTForsTrial-Regular.woff2') format('woff2'),
+        url('../fonts/TTForsTrial-Regular.woff') format('woff'),
+        url('../fonts/TTForsTrial-Regular.ttf') format('truetype'),
+        url('../fonts/TTForsTrial-Regular.svg#TTForsTrial-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fors Trial';
+    src: url('../fonts/TTForsTrial-Medium.eot');
+    src: url('../fonts/TTForsTrial-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTForsTrial-Medium.woff2') format('woff2'),
+        url('../fonts/TTForsTrial-Medium.woff') format('woff'),
+        url('../fonts/TTForsTrial-Medium.ttf') format('truetype'),
+        url('../fonts/TTForsTrial-Medium.svg#TTForsTrial-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Fellows VF Educational';
+    src: url('../fonts/TTFellowsVFEducational-Rg.eot');
+    src: url('../fonts/TTFellowsVFEducational-Rg.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTFellowsVFEducational-Rg.woff2') format('woff2'),
+        url('../fonts/TTFellowsVFEducational-Rg.woff') format('woff'),
+        url('../fonts/TTFellowsVFEducational-Rg.ttf') format('truetype'),
+        url('../fonts/TTFellowsVFEducational-Rg.svg#TTFellowsVFEducational-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

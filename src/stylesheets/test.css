@@ -1,0 +1,225 @@
+.test-page {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 80px 100px;
+}
+
+.test-page .nav-link {
+    color: var(--text);
+}
+
+.test-page .nav-link.active {
+    color: var(--green);
+}
+
+.test-page .logo {
+    display: flex;
+}
+
+.test-quiz {
+    max-width: 1060px;
+    margin: 100px auto 0;
+}
+
+.test-quiz.is-entering {
+    animation: catalogCardIn 0.4s ease both;
+}
+
+.test-step {
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.test-fieldset {
+    border: none;
+}
+
+.test-question {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+    max-width: 1100px;
+    margin-bottom: 44px;
+}
+
+.test-options {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.test-option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.test-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.test-radio {
+    position: relative;
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #3A3A3A;
+    border-radius: 50%;
+    transition: border-color 0.2s ease;
+}
+
+.test-radio::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: var(--green);
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+
+.test-option:hover .test-radio,
+.test-option input:checked + .test-radio {
+    border-color: var(--green);
+}
+
+.test-option input:checked + .test-radio::after {
+    transform: scale(1);
+}
+
+.test-option input:focus-visible + .test-radio {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+}
+
+.test-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 56px;
+}
+
+.test-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+    padding: 0 24px;
+    border-radius: 12px;
+    font-size: 22px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+.test-btn--outline {
+    border: 2px solid var(--text);
+    background: transparent;
+    color: var(--text);
+}
+
+.test-btn--outline:hover:not(:disabled) {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.test-btn--filled {
+    border: 2px solid var(--green);
+    background: var(--green);
+    color: #ffffff;
+}
+
+.test-btn--filled:hover:not(:disabled) {
+    border-color: var(--green-hover);
+    background: var(--green-hover);
+}
+
+.test-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.test-result {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 80px;
+    align-items: start;
+    margin-top: 70px;
+    animation: catalogCardIn 0.4s ease both;
+}
+
+.test-result-title {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+.test-result-desc p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.test-result-desc p + p {
+    margin-top: 32px;
+}
+
+.test-result-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 48px;
+}
+
+.test-result-actions .test-btn {
+    flex: 1 1 200px;
+    font-size: 18px;
+}
+
+.test-result-img {
+    width: 100%;
+    aspect-ratio: 565 / 490;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.test-page [hidden] {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .test-quiz.is-entering,
+    .test-result { animation: none; }
+}
+
+@media (max-width: 1024px) {
+    .test-page { padding: 30px 40px 80px; }
+    .test-quiz { margin-top: 60px; }
+    .test-result { gap: 40px; margin-top: 50px; }
+    .test-result-title { font-size: 52px; margin-bottom: 40px; }
+    .test-result-desc p { font-size: 18px; }
+}
+
+@media (max-width: 768px) {
+    .test-page { padding: 20px 20px 60px; }
+    .test-page .nav { gap: 16px; }
+    .test-page .nav-link { font-size: 12px; }
+    .test-quiz { margin-top: 40px; }
+    .test-step { margin-bottom: 20px; }
+    .test-question { font-size: 22px; margin-bottom: 32px; }
+    .test-option { font-size: 18px; gap: 14px; }
+    .test-actions { grid-template-columns: 1fr; margin-top: 40px; }
+    .test-btn { height: 54px; font-size: 18px; }
+    .test-result { grid-template-columns: minmax(0, 1fr); margin-top: 32px; }
+    .test-result-title { font-size: 40px; margin-bottom: 28px; }
+    .test-result-img { order: -1; }
+}
